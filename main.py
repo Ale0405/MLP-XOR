@@ -55,4 +55,4 @@ for epoch in range(epochs):
 print("\n--- Risultati finali ---")
 for x, y in zip(inputs, targets):
     out = sigmoid(np.dot(sigmoid(np.dot(x, W1) + b1), W2) + b2)
-    print(f"Input: {x} => Predetto: {round(float(out[0]), 3)} (Atteso: {y[0]})")
+    print(f"Input: {x} => Predetto: {round(out.item(), 3)} (Atteso: {y[0]})")
